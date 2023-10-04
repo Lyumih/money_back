@@ -1,4 +1,5 @@
 import { FastifyInstance } from 'fastify';
+import { articleController } from '../controllers';
 
 const articleRouter = async (app: FastifyInstance) => {
   const article = {
@@ -7,9 +8,7 @@ const articleRouter = async (app: FastifyInstance) => {
     desc: "описание и тест статей"
   }
 
-  app.get("/", () => {
-    return {articles: [article]}
-  })
+  app.get("/", articleController.handleGetArticle)
 
 }
 
