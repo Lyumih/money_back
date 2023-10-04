@@ -1,10 +1,7 @@
+import { articleService } from '../services'
+
 export const handleGetArticle = () => {
-  const article = {
-    id: "1",
-    name: "node.js fastify cont",
-    desc: "описание и тест статей"
-  }
-  return { articles: [article] }
+  return articleService.getArticle()
 }
 
 export default {
