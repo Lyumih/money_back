@@ -1,9 +1,11 @@
-import fastify from 'fastify'
+import Fastify from 'fastify'
 
-const server = fastify()
+// import firstRoute from './first-route'
+
+const server = Fastify({ logger: true })
 
 server.get('/ping', async (request, reply) => {
-  return 'pong132425324213'
+  return { hello: 'world2' }
 })
 
 server.listen({ port: 3000 }, (err, address) => {
