@@ -1,8 +1,12 @@
 import fastify, { FastifyServerOptions } from "fastify";
 import { articleRouter } from './routes';
+import cors from '@fastify/cors'
 
 const App = (options: FastifyServerOptions) => {
   const app = fastify(options)
+
+  app.register(cors)
+
 
   app.get("/ping", async () => "SERVER");
   app.register(articleRouter, { prefix: "/api/v1/articles" })
