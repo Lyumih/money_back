@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
-    "start": "node server/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon --watch src src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.2",
+    "nodemon": "^3.0.1",
     "typescript": "^5.2.2"
   }
 }

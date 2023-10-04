@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fastify_1 = __importDefault(require("fastify"));
 const server = (0, fastify_1.default)();
 server.get('/ping', async (request, reply) => {
-    return 'pong\n';
+    return 'pong132';
 });
 server.listen({ port: 3000 }, (err, address) => {
     if (err) {
