@@ -76,7 +76,9 @@ const App = (options: FastifyServerOptions) => {
     const random = Math.random()
     return {
       grab: random > 0.5,
-      random
+      random,
+      money: Math.floor(random * 100)
+
     }
   })
 
